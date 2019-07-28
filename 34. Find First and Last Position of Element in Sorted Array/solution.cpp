@@ -49,7 +49,7 @@ public:
         	else //nums[mid] >= target
         		r = mid - 1;
         }
-        if(l < nums.size() && nums[l] != target)//l < nums.size() for case input = [2,2], 3
+        if(l < nums.size() && nums[l] != target)//l < nums.size() for case: input = [2,2], 3
         	return ans;
         else
         	ans[0] = l;

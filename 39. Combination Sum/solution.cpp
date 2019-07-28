@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 #include <iterator>
@@ -59,6 +60,7 @@ public:
                     break;//for all candidates[i] is positive and the candidates is ascendant
             }
         }
+        /*
         //dictionary sort
         std::sort(ans.begin(),ans.end(),
             [](const std::vector<int> &a, const std::vector<int> &b){
@@ -71,6 +73,38 @@ public:
                 return a.size() <= b.size();
             }
         );
+        */
         return ans;
+    }
+};
+
+//dfs, backtracing
+class Solution {
+public:
+    std::vector<std::vector<int>> combinationSum(std::vector<int>& candidates, int target) {
+        std::sort(candidates.begin(), candidates.end());
+        std::vector<std::vector<int>> ans;
+        std::vector<int> cur;cur.reserve(candidates.size());
+        //init
+        int border = candidates.size() - 1;//border is the last index of the value that is less or equal than target
+        while(candidates[border] > target && border > 0) // for candidates[i] are positive and unique
+            --border;
+        dfs(cur,0,target,candidates,border,ans);
+        return ans;
+    }
+    void dfs(std::vector<int> &cur,int startIndex, int target, const std::vector<int> &candidates, int border, std::vector<std::vector<int>> &ans) {
+        if(target == 0)
+            ans.push_back(cur);
+        else{
+            for(int i = startIndex;i <= border;++i) {
+                int newtarget = target - candidates[i];
+                if(newtarget < 0)
+                    return;
+                cur.push_back(candidates[i]);
+                dfs(cur,i,newtarget,candidates,border,ans);
+                cur.pop_back();
+
+            }
+        }
     }
 };
