@@ -64,6 +64,32 @@ public:
         return ans;
     }
 };
+
+//using map, easy to read
+class Solution {
+public:
+    int romanToInt(std::string &s) {
+        if(s.empty())
+            return 0;
+        //std::map<char,int> char2val= {{'I',1}, {'V',5}, {'X',10}, {'L',50}, {'C',100}, {'D',500}, {'M',1000}};
+        int char2val[256];
+        char2val['I'] = 1;
+        char2val['V'] = 5;
+        char2val['X'] = 10;
+        char2val['L'] = 50;
+        char2val['C'] = 100;
+        char2val['D'] = 500;
+        char2val['M'] = 1000;
+        int ans = char2val[s[0]];
+        for(int i = 1; i < s.size(); ++i)
+        {
+            ans += char2val[s[i]];
+            if( char2val[s[i-1]] < char2val[s[i]])
+                ans -= 2 * char2val[s[i-1]];
+        }
+        return ans;
+    }
+};
 #include <vector>
 #include <iostream>
 int main()
