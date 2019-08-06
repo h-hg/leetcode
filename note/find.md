@@ -12,8 +12,9 @@ template <class ForwardIterator, class T, class Compare>
 `lower_bound` is similar to it.
 
 ## introduce
-upper_bound: find the first position whose value is greater than val
-lower_bound: find the first position whose value is greater or equal to val
+`std::upper_bound`: find the first position whose value is greater than val
+
+`std::lower_bound`: find the first position whose value is greater or equal to val
 ```cpp
 int main() {
 	int a[] = {0,1,3,3,4,5,6};

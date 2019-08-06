@@ -80,7 +80,7 @@ bool cmp(const Customize &a, const Customize &b)//asc
 
 std::sort(v.begin(), v.end(),cmp);
 ```
-### method 2 - function class
+### method 2 - functional class
 ```cpp
 struct Customize
 {
@@ -110,7 +110,7 @@ std::vector<Customize> v = { {1}, {9}, {5}, {2}, {7}, {3} };
 std::sort(
 	v.begin(),
 	v.end(),
-	[](const Customize&a,const Customize &b){
+	[](const Customize&a,const Customize &b)->bool{
 		return a._val < b._val;
 	}
 );
