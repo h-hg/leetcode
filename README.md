@@ -6,33 +6,33 @@ Welcome to optimize them.
 |Num|Title|Difficulty|Tag|
 |:-:|:-:|:-:|:-:|
 |1|Two Sum|Easy|`Array`, `Hash Table`|
-|2|Add Two Numbers|||
-|3|Longest Substring Without Repeating Characters|||
-|5|Longest Palindromic Substring|||
-|6|ZigZag Conversion|||
-|7|Reverse Integer|||
-|8|String to Integer (atoi)|||
-|9|Palindrome Number|||
-|11|Container With Most Water|||
-|12|Integer to Roman|||
-|13|Roman to Integer|||
-|14|Longest Common Prefix|||
-|15|3sum|||
-|16|3Sum Closest|||
-|17|Letter Combinations of a Phone Number|||
-|18|4Sum|||
-|19|Remove Nth Node From End of List|||
-|20|Valid Parentheses|||
-|21|Merge Two Sorted Lists|||
-|22|Generate Parentheses|||
-|24|Swap Nodes in Pairs|||
-|25|Reverse Nodes in k-Group|||
-|26|Remove Duplicates from Sorted Array|||
-|27|Remove Element|||
-|29|Divide Two Integers|||
-|31|Next Permutation|||
-|33|Search in Rotated Sorted Array|||
-|34|Find First and Last Position of Element in Sorted Array|||
+|2|Add Two Numbers|Medium||
+|3|Longest Substring Without Repeating Characters|Medium||
+|5|Longest Palindromic Substring|Medium||
+|6|ZigZag Conversion|Medium||
+|7|Reverse Integer|Easy||
+|8|String to Integer (atoi)|Medium||
+|9|Palindrome Number|Easy||
+|11|Container With Most Water|Medium||
+|12|Integer to Roman|Medium||
+|13|Roman to Integer|Easy||
+|14|Longest Common Prefix|Easy||
+|15|3sum|Medium||
+|16|3Sum Closest|Medium||
+|17|Letter Combinations of a Phone Number|Medium||
+|18|4Sum|Medium||
+|19|Remove Nth Node From End of List|Medium||
+|20|Valid Parentheses|Easy||
+|21|Merge Two Sorted Lists|Easy||
+|22|Generate Parentheses|Medium||
+|24|Swap Nodes in Pairs|Medium||
+|25|Reverse Nodes in k-Group|Hard||
+|26|Remove Duplicates from Sorted Array|Easy||
+|27|Remove Element|Easy||
+|29|Divide Two Integers|Medium||
+|31|Next Permutation|Medium||
+|33|Search in Rotated Sorted Array|Medium||
+|34|Find First and Last Position of Element in Sorted Array|Medium||
 |35|Search Insert Position|||
 |36|Valid Sudoku|||
 |39|Combination Sum|||
@@ -70,6 +70,7 @@ Welcome to optimize them.
 |119|Pascal's Triangle II|||
 |121|Best Time to Buy and Sell Stock|||
 |125|Valid Palindrome|||
+|133|Clone Graph|Medium|`DFS`, `BFS`, `Graph`||
 |136|Single Number|||
 |137|Single Number II|||
 |151|Reverse Words in a String|||
@@ -113,6 +114,8 @@ Welcome to optimize them.
 |520|Detect Capital|||
 |521|Longest Uncommon Subsequence I|Easy|`String`|
 |524|Longest Word in Dictionary through Deleting|||
+|557|Reverse Words in a String III|Easy|`String`|
+|657|Robot Return to Origin|Easy|`String`|
 |1002|Find Common Characters|||
 |1122|Relative Sort Array|||
 
