@@ -84,6 +84,7 @@ Welcome to optimize them.
 |189|Rotate Array|||
 |200|Number of Islands|||
 |202|Happy Number|||
+|207|Course Schedule|Medium|`DFS`, `BFS`, `Graph`, `Topological Sort`|
 |217|Contains Duplicate|||
 |219|Contains Duplicate II|||
 |231|Power of Two|||
