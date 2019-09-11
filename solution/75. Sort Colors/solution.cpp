@@ -20,7 +20,20 @@ public:
 			nums[i] = WHITE;
 		for(int i = colors[1]; i < colors[2];++i)
 			nums[i] = BLUE;
-
+	}
+};
+//distribution counting - two pass
+class Solution{
+public:
+	void sortColors(std::vector<int>&nums) {
+		int colors[] = {0,0,0};
+		for(auto val:nums)
+			++colors[val];
+		colors[1] += colors[0];
+		colors[2] += colors[1];
+        auto tmp = nums;
+		for(auto val:tmp)
+			nums[--colors[val]] = val;	
 	}
 };
 //one pass - make sure that the number of RED and BLUE
@@ -28,20 +41,17 @@ class Solution {
 public:
     void sortColors(std::vector<int>& nums) {
     	int idx_red = -1, idx_blue = nums.size();
-    	//fill the red and blue, idx_red < i < idx_blue
-    	for(int i = 0; i < idx_blue;){
-    		if(nums[i] == RED){
-                if(i != ++idx_red)//make sure that idx_red < i
-                    std::swap(nums[i], nums[idx_red]);
+    	//fill the red and blue, idx_red < idx_white < idx_blue
+    	for(int idx_white = 0; idx_white < idx_blue;){
+    		if(nums[idx_white] == RED){
+                if(idx_white != ++idx_red)//make sure that idx_red < idx_white
+                    std::swap(nums[idx_white], nums[idx_red]);
                 else
-                    ++i;
-            } else if(nums[i] == BLUE)
-    			std::swap(nums[i], nums[--idx_blue]);
+                    ++idx_white;
+            } else if(nums[idx_white] == BLUE)
+    			std::swap(nums[idx_white], nums[--idx_blue]);
     		else 
-    			++i;
+    			++idx_white;
         }
-    	//fill the white
-    	for(int idx_white = idx_red + 1;idx_white < idx_blue;++idx_white)
-    		nums[idx_white] = WHITE;
     }
 };
